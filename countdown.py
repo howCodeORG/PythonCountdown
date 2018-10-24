@@ -2,7 +2,7 @@ def countdown(seconds=None):
     import time
 
     while True:
-        while not seconds or not seconds.isdigit():
+        while not seconds or type(seconds) is not int:
             uin = input(">> ")
             try:
                 seconds = abs(int(uin))
